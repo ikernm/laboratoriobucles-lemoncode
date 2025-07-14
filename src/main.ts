@@ -78,38 +78,36 @@ const pacientes: Pacientes[] = [
 
 // Apartado 1
 
-/*
 const especialidadPediatra: Especialidad = "Pediatra";
 
 const obtenPacientesAsignadosAPediatria = (pacientes: Pacientes[]): Pacientes[] => {
-
-  const resultado: Pacientes[] = [];
-
+  const resultadoA: Pacientes[] = [];
   for (let i = 0; i < pacientes.length; i++) {
-
     if (pacientes[i].especialidad === especialidadPediatra) {
-      resultado.push(pacientes[i]);
+      resultadoA.push(pacientes[i]);
     }
   }
-  return resultado;
+  return resultadoA;
 };
 
+
 const obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios = (pacientes: Pacientes[]) => {
+  const resultadoB: Pacientes[] = [];
   for (let i=0; i<pacientes.length; i++) {
     if (pacientes[i].especialidad === especialidadPediatra && pacientes[i].edad < 10){
-      console.log(pacientes[i]);
+      resultadoB.push(pacientes[i]);
     }
 };
+return resultadoB;
 }
 
 console.log(obtenPacientesAsignadosAPediatria(pacientes));
 console.log(obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes));
-*/
 
 // Apartado 2
 
-/*
 const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
+
   let activarProctolo = false;
 
   for (let i = 0; i < pacientes.length; i++) {
@@ -121,15 +119,13 @@ const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
 
     }
   }
-
   return activarProctolo;
 };
 
 console.log(activarProtocoloUrgencia(pacientes));
-*/
 
 // Apartado 3
-/*
+
 const reasignaPacientesAMedicoFamilia = (pacientes: Pacientes[]): Pacientes[] => {
     const pacientesReasignados: Pacientes[] = [];
     
@@ -147,10 +143,9 @@ const reasignaPacientesAMedicoFamilia = (pacientes: Pacientes[]): Pacientes[] =>
 };
 
 console.log(reasignaPacientesAMedicoFamilia(pacientes));
-*/
 
 // Apartado 4
-/*
+
 const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
   let citasConPediatras = false;
 
@@ -158,18 +153,15 @@ const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 
         if (pacientes[i].especialidad === "Pediatra") {
             citasConPediatras = true;
-        } else {
-            citasConPediatras = false;
         }
     }
     return citasConPediatras;
 };
 
 console.log(HayPacientesDePediatria(pacientes));
-*/
 
 // Apartado 5
-
+/*
 interface NumeroPacientesPorEspecialidad {
   medicoDeFamilia: number;
   pediatria: number;
@@ -203,3 +195,4 @@ const cuentaPacientesPorEspecialidad = (pacientes: Pacientes[]): NumeroPacientes
 };
 
 console.log(cuentaPacientesPorEspecialidad(pacientes));
+*/
