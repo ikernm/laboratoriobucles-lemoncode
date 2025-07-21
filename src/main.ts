@@ -92,7 +92,6 @@ const obtenPacientesAsignadosAPediatria = (pacientes: Pacientes[]): Pacientes[] 
   return resultadoA;
 };
 
-
 const obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios = (pacientes: Pacientes[]) => {
   const resultadoB: Pacientes[] = [];
   for (let i=0; i<pacientes.length; i++) {
@@ -118,7 +117,7 @@ const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
 
       console.log(`El paciente ${pacientes[i].nombre} ${pacientes[i].apellidos} debe activar el protocolo de urgencia.`);
       activarProctolo = true;
-
+      return activarProctolo;
     }
   }
   return activarProctolo;
@@ -155,6 +154,7 @@ const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 
         if (pacientes[i].especialidad === "Pediatra") {
             citasConPediatras = true;
+            return citasConPediatras;
         }
     }
     return citasConPediatras;
@@ -197,7 +197,7 @@ const cuentaPacientesPorEspecialidad = (pacientes: Pacientes[]): NumeroPacientes
 };
 
 console.log(cuentaPacientesPorEspecialidad(pacientes));
-*/
+
 // Laboratorio Módulo 8.2 - Array Methods
 
 // Apartado 1
@@ -223,14 +223,7 @@ console.log(obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes));
 // Apartado 2
 
 const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
-  let activarProctolo = false;
-
-  pacientes.forEach(paciente => {
-    if (paciente.temperatura > 39 && paciente.frecuenciaCardiaca > 100) {
-      activarProctolo = true;
-    }
-  });
-  return activarProctolo;
+  return pacientes.some(paciente => paciente.temperatura > 39 && paciente.frecuenciaCardiaca > 100);
 };
 
 console.log(activarProtocoloUrgencia(pacientes));
@@ -258,7 +251,7 @@ const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 };
 
 console.log(HayPacientesDePediatria(pacientes));
-
+*/
 // Apartado 5
 
 interface NumeroPacientesPorEspecialidad {
