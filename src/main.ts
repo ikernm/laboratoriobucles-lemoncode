@@ -219,17 +219,17 @@ const obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios = (pacientes: Pacientes
 }
 
 console.log(obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes));
-
+*/
 // Apartado 2
 
 const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
   return pacientes.some(paciente => paciente.temperatura > 39 && paciente.frecuenciaCardiaca > 100);
-};
+}
 
 console.log(activarProtocoloUrgencia(pacientes));
 
 // Apartado 3
-
+/*
 const reasignaPacientesAMedicoFamilia = (pacientes: Pacientes[]): Pacientes[] => {
   return pacientes.map((paciente) => {
     if (paciente.especialidad === "Pediatra") {
@@ -251,7 +251,7 @@ const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 };
 
 console.log(HayPacientesDePediatria(pacientes));
-*/
+
 // Apartado 5
 
 interface NumeroPacientesPorEspecialidad {
@@ -269,3 +269,4 @@ const cuentaPacientesPorEspecialidad = (pacientes: Pacientes[]): NumeroPacientes
 };
 
 console.log(cuentaPacientesPorEspecialidad(pacientes));
+*/
